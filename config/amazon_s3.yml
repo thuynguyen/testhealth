@@ -1,0 +1,27 @@
+development:
+  bucket: health_dev
+  access_key_id: AKIAIOYCWZFROQJEEBYQ
+  secret_access_key: 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
+  max_file_size: 104857600
+  acl: public-read
+    
+test:
+  bucket: health_test
+  access_key_id: 
+  secret_access_key: 
+  max_file_size: 104857600
+  acl: public-read
+  
+production:
+  bucket: health_mgnt  
+  access_key_id: AKIAIOYCWZFROQJEEBYQ
+  secret_access_key: 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
+  max_file_size: 104857600
+  acl: public-read
+
+staging:
+  bucket: health_stg
+  access_key_id: AKIAIOYCWZFROQJEEBYQ
+  secret_access_key: 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
+  max_file_size: 104857600
+  acl: public-read

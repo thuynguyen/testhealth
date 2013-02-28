@@ -1,0 +1,10 @@
+= simple_form_for(@service) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.simple_fields_for :operations do |o|
+      = render "operation_fields", :f => o
+      = link_to_add_fields "Add Operation", f, :operations
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,44 @@
+%center
+  %b.font-title PHÒNG KHÁM CHUYÊN KHOA SẢN - KHHGĐ
+  %div 
+    %b.font-title Bs. Nguyễn Cảnh Sơn   
+  %div 
+    Địa điểm:
+    %span 
+      %b= @position.address rescue "        "
+  %div 
+    Điện thoại:
+    %span 
+      %b= @position.phone rescue ""
+    %span{:style =>"margin-left: 30px;"}
+      Email:
+      %span= mail_to @position.email rescue ""
+  %div
+    %span Thời gian làm việc hàng ngày: 
+    %b Sáng từ 6h đến 6h45, chiều từ 17h đến 21h
+  %div{:style => "margin-top: 30px;"}= image_tag @position.map if @position 
+/ %h1 Listing positions
+
+/ %table
+/   %tr
+/     %th Name
+/     %th Address
+/     %th Phone
+/     %th Email
+/     %th
+/     %th
+/     %th
+
+/   - @positions.each do |position|
+/     %tr
+/       %td= position.name
+/       %td= position.address
+/       %td= position.phone
+/       %td= position.email
+/       %td= link_to 'Show', position
+/       %td= link_to 'Edit', edit_position_path(position)
+/       %td= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete
+
+/ %br
+
+/ = link_to 'New Position', new_position_path

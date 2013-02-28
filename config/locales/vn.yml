@@ -1,0 +1,10 @@
+vn:
+  common: 
+    error_photo_file_type: "File must be of file type .jpeg, .jpg or .png"
+  menu:
+    home: "Trang Chủ"
+    service: "Dịch Vụ"
+    position: "Liên Hệ"
+
+  services:
+    title: "Phòng khám bao gồm các dịch vụ sau:"

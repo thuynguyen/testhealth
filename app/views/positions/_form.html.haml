@@ -1,0 +1,19 @@
+= simple_form_for(@position) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :address
+    = f.input :phone
+    = f.input :email
+    .pull-left
+      .crop_image
+        = image_tag((f.object.new_record? ? "missing.png" : f.object.map.url(:medium)), 
+                    :size => "200x200", :id => 'upload-image')
+      = f.input :map, :as => :file, :label => false
+      .control-group.error
+        .controls
+          = f.error :map_content_type
+    .clearfix
+  .form-actions
+    = f.button :submit

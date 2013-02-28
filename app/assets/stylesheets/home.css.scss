@@ -1,0 +1,17 @@
+$color-font: #E17C25;
+$color-line: #03a0ff;
+.home {
+	border: 1px solid $color-line;  
+	width: 800px; 
+	height: 300px;
+	border-radius:3px;
+	
+	.title {
+		padding-left: 20px;
+		color: $color-font;
+	}
+	.content {
+    padding-left: 40px;
+    color: #645032;
+	}
+}

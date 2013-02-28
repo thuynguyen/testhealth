@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @position.name
+%p
+  %b Address:
+  = @position.address
+%p
+  %b Phone:
+  = @position.phone
+%p
+  %b Email:
+  = @position.email
+
+= link_to 'Edit', edit_position_path(@position)
+\|
+= link_to 'Back', positions_path

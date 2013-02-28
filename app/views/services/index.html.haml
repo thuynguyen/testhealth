@@ -1,0 +1,28 @@
+%center{:style=>"margin-top: 10px;"}
+  %b.font-title= t("services.title")
+  %div{:style=>"width: 500px;"}
+    - operates = @service.operations.map &:name
+    %ul.operations
+      - operates.each do |name|
+        %li= name 
+    .clearfix
+
+/ %h1 Listing services
+
+/ %table
+/   %tr
+/     %th Name
+/     %th
+/     %th
+/     %th
+
+/   - @services.each do |service|
+/     %tr
+/       %td= service.name
+/       %td= link_to 'Show', service
+/       %td= link_to 'Edit', edit_service_path(service)
+/       %td= link_to 'Destroy', service, :confirm => 'Are you sure?', :method => :delete
+
+/ %br
+
+/ = link_to 'New Service', new_service_path

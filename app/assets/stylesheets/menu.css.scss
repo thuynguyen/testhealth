@@ -1,0 +1,166 @@
+$color-font: #E17C25;
+a:link:after, a:visited:after {
+  content: none !important;
+  font-size: 90%;
+}
+
+ul.menu {
+  list-style-type:none;
+}
+ul.menu li a{
+  text-decoration: none;
+}
+
+ul.menu li.active span{
+  color: #3A7F8F !important;
+}
+@mixin logo {
+  background-image: url("../assets/logo_head.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 166px;
+}
+.home-logo {
+  @include logo 
+}
+#user_nav {
+  float: right;
+  margin-top: 10px;
+}
+.bg-logo {
+  width: 489px;
+  margin-left: 230px;
+  a {
+    .logo {
+      @include logo
+    }
+  }
+}
+
+@mixin change_image($name-image) {
+  background-image: url($name-image);
+  width: 28px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  cursor: pointer;
+}
+
+.header {
+  #main-menu {
+    ul.menu {
+      width: 100%;
+      background-color: #7DD6FB;
+      /*03a0ff;02a1fd;03a2fe*/  
+      background-repeat:repeat-x;
+      margin-left: 0px !important;
+      height: 55px;
+      li {
+        float: left;
+        padding-top: 15px;
+        position: relative;
+        a {
+          img.hidden {
+            display:none;
+          }
+          &:hover {
+            color: #9358A3;
+            background-color: transparent;
+          }
+        }
+        
+      }
+      li.image_directory {
+        @include change_image("../assets/nav_directory.png")
+      }
+      li.active_directory {
+        @include change_image("../assets/nav_directory_active.png")
+      }
+      li.over_directory {
+        @include change_image("../assets/nav_directory_over.png")
+      }
+      li.image_inbox {
+        @include change_image("../assets/nav_inbox.png")
+      }
+      li.active_inbox {
+        @include change_image("../assets/nav_inbox_active.png")
+      }
+      li.over_inbox {
+        @include change_image("../assets/nav_inbox_over.png")
+      }
+      li.image_message {
+        @include change_image("../assets/nav_message.png")
+      }
+      li.active_message {
+        @include change_image("../assets/nav_message_active.png")
+      }
+      li.over_message {
+        @include change_image("../assets/nav_message_over.png")
+      }
+      li.image_leaderboard {
+        @include change_image("../assets/nav_leaderboard.png")
+      }
+      li.active_leaderboard {
+        @include change_image("../assets/nav_leaderboard_active.png")
+      }
+      li.over_leaderboard {
+        @include change_image("../assets/nav_leaderboard_over.png")
+      }
+      li.txt-menu {
+        padding: 18px 30px 10px 5px ;
+      }
+      li.temp {
+        padding-top: 15px !important;
+      }
+      li.active {
+        padding-top: 19px;
+        color: $color-font;
+      }
+
+      li.active.text-menu {
+        padding-right: 29px;
+        padding-left: 5px;
+      }
+
+      li.active a {
+        color: #1784F8;
+        font-weight: bold;
+        img.directory, img.inbox, img.message, img.leaderboard {
+          display: block;
+        }
+        img.active-1{
+          top: 46px;
+          position: absolute;
+          left: 14px;
+          display: block;
+        }
+        img.active-2 {
+          top: 46px;
+          position: absolute;
+          left: 10px;
+          display: block !important;
+        }
+        img.active-3 {
+          top: 46px;
+          position: absolute;
+          left: 17px;
+          display: block !important;
+        }
+        img.active-4 {
+          top: 46px;
+          position: absolute;
+          left: 27px;
+          display: block !important;
+        }
+        
+      }
+
+      li.empty {
+        padding-left: 75px;
+      }
+    }
+    .logo {
+      text-align: center  !important;
+    }
+  }
+}

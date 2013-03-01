@@ -55,6 +55,11 @@ ul.menu li.active span{
       background-repeat:repeat-x;
       margin-left: 0px !important;
       height: 55px;
+      .vn, .en {
+        margin-top: 15px;
+        margin-right: 10px;
+        float: right;
+      }
       li {
         float: left;
         padding-top: 15px;

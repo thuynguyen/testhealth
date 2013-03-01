@@ -1,6 +1,6 @@
 Healthcare::Application.routes.draw do
   root :to => "home#index"
-  #scope "(:locale)", :locale => /en|vn/ do
+  scope "(:locale)", :locale => /en|vn/ do
     devise_for :users
 
     resources :services
@@ -11,7 +11,7 @@ Healthcare::Application.routes.draw do
         get :full_map
       end 
     end 
-  #end
+  end
 
 
   # The priority is based upon order of creation:

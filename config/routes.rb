@@ -6,7 +6,11 @@ Healthcare::Application.routes.draw do
     resources :services
 
 
-    resources :positions
+    resources :positions do 
+      collection do 
+        get :full_map
+      end 
+    end 
   #end
 
 

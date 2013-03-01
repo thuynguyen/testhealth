@@ -16,7 +16,11 @@
   %div
     %span Thời gian làm việc hàng ngày: 
     %b Sáng từ 6h đến 6h45, chiều từ 17h đến 21h
-  %div{:style => "margin-top: 30px;"}= image_tag @position.map if @position 
+  %div{:style => "margin-top: 5px;"}
+    %div{:style=>"width: 494px;text-align: right;margin-bottom: 5px;"}= link_to "Xem đường đi", full_map_positions_path
+    %div= image_tag @position.map if @position 
+    
+
 / %h1 Listing positions
 
 / %table

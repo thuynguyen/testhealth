@@ -1,0 +1,21 @@
+%center
+  %b.font-title PHÒNG KHÁM CHUYÊN KHOA SẢN - KHHGĐ
+  %div 
+    %b.font-title Bs. Nguyễn Cảnh Sơn   
+  %div 
+    Địa điểm:
+    %span 
+      %b= @position.address rescue "        "
+  %div 
+    Điện thoại:
+    %span 
+      %b= @position.phone rescue ""
+    %span{:style =>"margin-left: 30px;"}
+      Email:
+      %span= mail_to @position.email rescue ""
+  %div
+    %span Thời gian làm việc hàng ngày: 
+    %b Sáng từ 6h đến 6h45, chiều từ 17h đến 21h
+  %div{:style=>"width: 650px;text-align: right;margin: 5px; 0"}= link_to "Thu nhỏ bản đồ", positions_path
+    
+  %iframe{:frameborder => "0", :height => "700", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps/ms?msa=0&msid=205731697625228134268.0004b51f6f81b2a717d16&ie=UTF8&t=m&vpsrc=6&ll=10.498198,107.172087&spn=0.007377,0.00751&z=17&output=embed", :width => "650"}

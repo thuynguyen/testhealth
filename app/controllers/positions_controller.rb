@@ -22,7 +22,10 @@ class PositionsController < ApplicationController
       format.json { render json: @position }
     end
   end
-
+  
+  def full_map 
+    @position = Position.last
+  end
   # GET /positions/new
   # GET /positions/new.json
   def new

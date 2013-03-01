@@ -13,9 +13,12 @@ input[type="email"]{
 select {
 	line-height:24px
 }
-a:hover {
-	color: red;
-	background-color: none;
+
+a {
+  &:hover {
+    color: #9358A3;
+    background-color: transparent !important;
+  }
 }
 textarea, input[type="text"], input[type="password"], input[type="datetime"], 
 input[type="datetime-local"], input[type="date"], input[type="month"], 

@@ -1,8 +1,8 @@
 vn:
   common: 
     error_photo_file_type: "File must be of file type .jpeg, .jpg or .png"
-    full_title: "PHÒNG KHÁM CHUYÊN KHOA SẢN - KHHGĐ"
-    title: "PHÒNG KHÁM CHUYÊN KHOA SẢN"
+    full_title: "PHÒNG KHÁM CHUYÊN KHOA PHỤ SẢN - KHHGĐ"
+    title: "PHÒNG KHÁM CHUYÊN KHOA PHỤ SẢN"
     job: "Bs."
     pos: "Địa điểm"
     phone: "Điện thoại"
@@ -14,12 +14,12 @@ vn:
     home: "Trang Chủ"
     service: "Dịch Vụ"
     position: "Liên Hệ"
-    lang_vn: "Tieng Viet"
-    lang_en: "Tieng Anh"
+    lang_vn: "Tiếng Việt"
+    lang_en: "Tiếng Anh"
   services:
     title: "Phòng khám bao gồm các dịch vụ sau:"
   home: 
-    title_job: "Bác sĩ CKI"
+    title_job: "Bác sĩ Chuyên Khoa I"
     subject: "Chuyên Khoa"
     work_at: "Công tác"
     address: "Phòng Khám"

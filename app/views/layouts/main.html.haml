@@ -19,11 +19,11 @@
 
   %body
     .container{:style=>"background-color: #fff;"}
-      - if current_locale == "vn"
-        %div{:style => "background-image: url('../assets/pk.jpg'); height: 223px;background-repeat: no-repeat;"}
+      - if current_locale == "en"
+        %div{:style => "background-image: url('../assets/pk_en.jpg'); height: 223px;background-repeat: no-repeat;"}
           = render "shared/menu"
       - else
-        %div{:style => "background-image: url('../assets/pk_en.jpg'); height: 223px;background-repeat: no-repeat;"}
+        %div{:style => "background-image: url('../assets/pk.jpg'); height: 223px;background-repeat: no-repeat;"}
           = render "shared/menu"
                 
       = bootstrap_flash

@@ -1,0 +1,20 @@
+.header{:style=>"padding-top: 182px;"}
+  #main-menu
+    .menu
+      = hidden_field_tag "current_tab", current_tab
+      = tabs_tag :open_tabs => { :class => "menu"}, :builder => ApplicationHelper::MenuTabBuilder do |tab|
+        = tab.placeholder "", "#", :class => "empty"
+        
+        = tab.directory_temp "", root_path, :class => "image_directory"
+        = #tab.directory_temp image_tag("arrow.png", :size => "22x12", :class => "hidden active-1") , ""
+        = tab.directory        t("menu.home"), root_path(:locale => current_locale), {:class => "txt-menu directory"}
+        
+        = tab.inbox_temp "", services_path(:locale => current_locale), :class => "image_inbox"
+        = #tab.inbox_temp image_tag("arrow.png", :size => "22x12", :class => "hidden active-2") , ""
+        = tab.inbox  t("menu.service"), services_path(:locale => current_locale), :class => "txt-menu inbox"
+        
+        = tab.message_temp "", positions_path(:locale => current_locale), :class => "image_message"
+        = #tab.message_temp       image_tag("arrow.png", :size => "22x12", :class => "hidden active-3") , ""
+        = tab.message  t("menu.position"), positions_path(:locale => current_locale), {:class => "txt-menu message"}
+        = image_tag("en.png", :class => "en", :title => t("menu.lang_en"))
+        = image_tag("vn.png", :class => "vn", :title => t("menu.lang_vn"))

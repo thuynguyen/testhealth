@@ -15,6 +15,7 @@ window.homeObject =
     else if current_tab == "leaderboard"
       $(".active.temp").first().addClass("active_leaderboard")
     return
+
   changeLanguage: ->
     $(".vn, .en").click ->
       lang = $(this).attr("class")
@@ -25,11 +26,13 @@ window.homeObject =
                 locale: lang
               }
         success: (res) ->
-          url = document.URL;
-          if lang == "vn" && url.indexOf("en") > 0
-            window.location = url.replace("en", lang)
-          else if lang == "en" && url.indexOf("vn") > 0
-            window.location = url.replace("vn", lang)
+          url = document.URL
+          url_split = url.split("com")
+          contain_lang = url_split[1]
+          if lang == "vn" && contain_lang.indexOf("en") > 0
+            window.location = [url_split[0], contain_lang.replace("en", lang)].join("com")
+          else if lang == "en" && contain_lang.indexOf("vn") > 0
+            window.location = [url_split[0], contain_lang.replace("vn", lang)].join("com")
           else 
             window.location.reload()
         failure: (res) ->

@@ -4,7 +4,25 @@
 en:
   common: 
     error_photo_file_type: "File must be of file type .jpeg, .jpg or .png"
+    full_title: "PHÒNG KHÁM CHUYÊN KHOA SẢN - KHHGĐ"
+    title: "PHÒNG KHÁM CHUYÊN KHOA SẢN"
+    job: "Dr."
+    pos: "Location"
+    phone: "Phone"
+    title_time: "Daily Working"
+    work_time: "From 6:00 AM to 6:45 AM, and From 17:00 PM to 21:00 PM"
+    street: "View street"
+    current_place: "Current Position"
   menu:
     home: "Home"
     service: "Services"
-    postion: "Contact us"
+    position: "Contact us"
+    lang_en: "English"
+    lang_vn: "Vietnamese"
+  services:
+    title: "This clinic includes the following services:"
+  home: 
+    title_job: "Doctor Specialist 1"
+    subject: "Specialist"
+    work_at: "Work at"
+    address: "Clinic"

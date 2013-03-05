@@ -1,0 +1,2 @@
+$ ->
+  homeObject.setup()

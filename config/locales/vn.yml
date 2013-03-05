@@ -1,10 +1,25 @@
 vn:
   common: 
     error_photo_file_type: "File must be of file type .jpeg, .jpg or .png"
+    full_title: "PHÒNG KHÁM CHUYÊN KHOA SẢN - KHHGĐ"
+    title: "PHÒNG KHÁM CHUYÊN KHOA SẢN"
+    job: "Bs."
+    pos: "Địa điểm"
+    phone: "Điện thoại"
+    title_time: "Thời gian làm việc hàng ngày"
+    work_time: "Sáng từ 6h đến 6h45, chiều từ 17h đến 21h"
+    street: "Xem đường đi"
+    current_place: "Thu nhỏ bản đồ"
   menu:
     home: "Trang Chủ"
     service: "Dịch Vụ"
     position: "Liên Hệ"
-
+    lang_vn: "Tieng Viet"
+    lang_en: "Tieng Anh"
   services:
     title: "Phòng khám bao gồm các dịch vụ sau:"
+  home: 
+    title_job: "Bác sĩ CKI"
+    subject: "Chuyên Khoa"
+    work_at: "Công tác"
+    address: "Phòng Khám"

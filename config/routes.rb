@@ -1,11 +1,13 @@
 Healthcare::Application.routes.draw do
   root :to => "home#index"
+  get "change_locale" => "home#change_locale"
   scope "(:locale)", :locale => /en|vn/ do
     devise_for :users
 
     resources :services
 
-
+    
+    
     resources :positions do 
       collection do 
         get :full_map

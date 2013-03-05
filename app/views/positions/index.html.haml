@@ -1,26 +1,27 @@
 %center
-  %b.font-title PHÒNG KHÁM CHUYÊN KHOA SẢN - KHHGĐ
+  %b.font-title= t("common.full_title")
   %div 
-    %b.font-title Bs. Nguyễn Cảnh Sơn   
+    %b.font-title= t("common.job")+ "Nguyễn Cảnh Sơn"   
   %div 
-    Địa điểm:
+    = t("common.pos") + ":"
     %span 
       %b= @position.address rescue "        "
   %div 
-    Điện thoại:
+    = t("common.phone") + ":"
     %span 
       %b= @position.phone rescue ""
     %span{:style =>"margin-left: 30px;"}
       Email:
       %span= mail_to @position.email rescue ""
   %div
-    %span Thời gian làm việc hàng ngày: 
-    %b Sáng từ 6h đến 6h45, chiều từ 17h đến 21h
+    %span= t("common.title_time") + ":" 
+    %b= t("common.work_time")
   %div{:style => "margin-top: 5px;"}
     %iframe{:frameborder => "0", :height => "350", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=vi&geocode=&q=156+Nguy%E1%BB%85n+Thanh+%C4%90%E1%BA%B1ng,+ph%C6%B0%E1%BB%9Dng+Ph%C6%B0%E1%BB%9Bc+Hi%E1%BB%87p,+Tp+B%C3%A0+R%E1%BB%8Ba,+B%C3%A0+R%E1%BB%8Ba-V%C5%A9ng+T%C3%A0u&aq=&sll=37.0625,-95.677068&sspn=47.569986,102.832031&ie=UTF8&hq=&hnear=156+Nguy%E1%BB%85n+Thanh+%C4%90%E1%BA%B1ng,+Ph%C6%B0%E1%BB%9Bc+H%C6%B0ng,+B%C3%A0+R%E1%BB%8Ba,+B%C3%A0+R%E1%BB%8Ba+-+V%C5%A9ng+T%C3%A0u,+Vi%E1%BB%87t+Nam&t=m&z=14&ll=10.498198,107.172087&output=embed", :width => "425"}
     %br/
     %small
       %a{:href => "https://maps.google.com/maps?f=q&source=embed&hl=vi&geocode=&q=156+Nguy%E1%BB%85n+Thanh+%C4%90%E1%BA%B1ng,+ph%C6%B0%E1%BB%9Dng+Ph%C6%B0%E1%BB%9Bc+Hi%E1%BB%87p,+Tp+B%C3%A0+R%E1%BB%8Ba,+B%C3%A0+R%E1%BB%8Ba-V%C5%A9ng+T%C3%A0u&aq=&sll=37.0625,-95.677068&sspn=47.569986,102.832031&ie=UTF8&hq=&hnear=156+Nguy%E1%BB%85n+Thanh+%C4%90%E1%BA%B1ng,+Ph%C6%B0%E1%BB%9Bc+H%C6%B0ng,+B%C3%A0+R%E1%BB%8Ba,+B%C3%A0+R%E1%BB%8Ba+-+V%C5%A9ng+T%C3%A0u,+Vi%E1%BB%87t+Nam&t=m&z=14&ll=10.498198,107.172087", :style => "color:#0000FF;text-align:left"}
+
     
 
 / %h1 Listing positions

@@ -2,6 +2,7 @@ window.homeObject =
   setup: ->
     @activeTab()
     @changeLanguage()
+    @showSlides()
     return 
   
   activeTab: ->
@@ -38,6 +39,34 @@ window.homeObject =
         failure: (res) ->
           return
       return
+  showSlides: -> 
+    $("#slides").slides
+      preload: true
+      preloadImage: "img/loading.gif"
+      play: 5000
+      pause: 2500
+      hoverPause: true
+      animationStart: (current) ->
+        $(".caption").animate
+          bottom: -35
+        , 100
+        
+        # example return of current slide number
+        console.log "animationStart on slide: ", current  if window.console and console.log
+
+      animationComplete: (current) ->
+        $(".caption").animate
+          bottom: 0
+        , 200
+        
+        # example return of current slide number
+        console.log "animationComplete on slide: ", current  if window.console and console.log
+
+      slidesLoaded: ->
+        $(".caption").animate
+          bottom: 0
+        , 200
+
       
  
 

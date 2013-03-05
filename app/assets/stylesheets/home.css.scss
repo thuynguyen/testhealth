@@ -2,16 +2,17 @@ $color-font: #E17C25;
 $color-line: #03a0ff;
 .home {
 	border: 1px solid $color-line;  
-	width: 800px; 
-	height: 300px;
+	width: 97%; 
+	min-height: 321px;
 	border-radius:3px;
-	
-	.title {
-		padding-left: 20px;
-		color: $color-font;
-	}
-	.cont {
-    padding-left: 40px;
-    color: #645032;
+	dl {
+		margin-left: 20px;
+		.title {
+			color: $color-font;
+		}
+		.cont {
+	    padding-left: 40px;
+	    color: #645032;
+		}
 	}
 }

@@ -1,14 +1,61 @@
 %center
   .home
-    %div{:style=>"margin-top: 20px;"}
-      %div.pull-left{:style=>"text-align: left; width: 370px;"}
-        %div.title= t("home.title_job")
-        %div.cont Nguyễn Cảnh Sơn 
-        %div.title= t("home.subject")
-        %div.cont Sản Khoa
-        %div.title= t("home.work_at")
-        %div.cont BV.Tỉnh Bà Rịa-Vũng Tàu
-        %div.title= t("home.address")
-        %div.cont 156 Nguyễn Thanh Đằng, phường Phước Hiệp, Tp Bà Rịa, Bà Rịa-Vũng Tàu
-      %div.span4.pull-right
-        = image_tag("hoa.jpg")
+    %div{:style=>"margin-top: 10px;"}
+      %div.pull-left{:style=>"text-align: left; width: 483px;"}
+        %div{:style => "margin-left: 20px; margin-bottom: 10px;"}= "Making the introduce your clinic. Is est unus of plurrimi maximus locis, ad habere a keyword quia id quod scriptum est intra <title> tag ostendit in search results ut vestri page titulum. Titulo tag brevem necesse est esse (VI aut VII verba ad maxime) et keyword quod oportet esse prope principium."
+        %dl
+          %dt.title= t("home.title_job")
+          %dd Nguyễn Cảnh Sơn 
+          %dt.title= t("home.subject")
+          %dd Sản Khoa
+          %dt.title= t("home.work_at")
+          %dd BV.Tỉnh Bà Rịa-Vũng Tàu
+          %dt.title= t("home.address")
+          %dd 156 Nguyễn Thanh Đằng, phường Phước Hiệp, Tp Bà Rịa, Bà Rịa-Vũng Tàu
+      %div.span4.pull-left
+        = #image_tag("hoa.jpg")
+        #container 
+          #slides
+            .slides_container
+              .slide
+                %a{:href => "#", :target => "_blank", :title => "Images of this clinic!"}
+                  = image_tag("img/slide-1.jpg")
+                .caption{:style => "bottom:0"}
+                  %p Images of this clinic!
+              .slide
+                %a{:href => "#", :target => "_blank", :title => "Images of this clinic!"}
+                  = image_tag("img/slide-2.jpg")
+                .caption
+                  %p Images of this clinic!
+              .slide
+                %a{:href => "#", :target => "_blank", :title => "Images of this clinic!"}
+                  = image_tag("img/slide-3.jpg")
+                .caption
+                  %p Images of this clinic!
+              .slide
+                %a{:href => "#", :target => "_blank", :title => "Images of this clinic!"}
+                  = image_tag("img/slide-4.jpg")
+                .caption
+                  %p We Eat Light
+              .slide
+                %a{:href => "#", :target => "_blank", :title => "Images of this clinic!"}
+                  = image_tag("img/slide-5.jpg")
+                .caption
+                  %p Images of this clinic!
+              .slide
+                %a{:href => "#", :target => "_blank", :title => "Images of this clinic!"}
+                  = image_tag("img/slide-6.jpg")
+                .caption
+                  %p Images of this clinic!
+              .slide
+                %a{:href => "#", :target => "_blank", :title => "Images of this clinic!"}
+                  = image_tag("img/slide-7.jpg")
+                .caption
+                  %p Images of this clinic!
+            %a.prev{:href => "#"}
+              = image_tag("img/arrow-prev.png")
+            %a.next{:href => "#"}
+              = image_tag("img/arrow-next.png")
+          %ul.pagination
+            %li 
+              %a

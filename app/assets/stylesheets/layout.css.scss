@@ -1,0 +1,25 @@
+.main-layout {
+	background-color: #fff;
+	.pk_en {
+		background-image: url('../assets/pk_en.jpg'); 
+		height: 223px;
+		background-repeat: no-repeat;
+	}
+	.pk {
+	  background-image: url('../assets/pk.jpg'); 
+	  height: 223px;
+	  background-repeat: no-repeat;
+	}
+	.main-content {
+		min-height: 410px; 
+		margin-top: 26px;
+	}
+
+	.margin-footer {
+		margin: 20px 0; 
+		border-bottom: 1px solid #03a0ff;
+	}
+	.footer-content {
+		margin: 0 10px;
+	}
+}

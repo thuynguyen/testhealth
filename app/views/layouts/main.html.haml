@@ -18,22 +18,22 @@
 
 
   %body
-    .container{:style=>"background-color: #fff;"}
+    .container.main-layout
       - if current_locale == "en"
-        %div{:style => "background-image: url('../assets/pk_en.jpg'); height: 223px;background-repeat: no-repeat;"}
+        .pk_en
           = render "shared/menu"
       - else
-        %div{:style => "background-image: url('../assets/pk.jpg'); height: 223px;background-repeat: no-repeat;"}
+        .pk
           = render "shared/menu"
                 
       = bootstrap_flash
-      %div{:style=>"min-height: 410px; margin-top: 26px;"}
+      .main-content
         = yield
         
     
       %footer
-        %div{:style=>"margin: 20px 0; border-bottom: 1px solid #03a0ff"}
-        %div{:style=>"margin: 0 10px;"}
+        .margin-footer
+        .footer-content
           .pull-left
             %b= t("common.title")
             %div 156 Nguyễn Thanh Đằng, phường Phước Hiệp, Tp Bà Rịa, Bà Rịa-Vũng Tàu

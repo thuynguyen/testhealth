@@ -1,6 +1,6 @@
-%center{:style=>"margin-top: 10px;"}
+%center.services
   %b.font-title= t("services.title")
-  %div{:style=>"width: 500px;"}
+  .list-perations
     - operates = @service.operations.map &:name
     %ul.operations
       - operates.each do |name|

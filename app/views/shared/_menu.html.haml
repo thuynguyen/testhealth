@@ -16,5 +16,9 @@
         = tab.message_temp "", positions_path(:locale => current_locale), :class => "image_message"
         = #tab.message_temp       image_tag("arrow.png", :size => "22x12", :class => "hidden active-3") , ""
         = tab.message  t("menu.position"), positions_path(:locale => current_locale), {:class => "txt-menu message"}
+
+        = tab.patient_temp "", patients_path(:locale => current_locale), :class => "image_message"
+        = #tab.message_temp       image_tag("arrow.png", :size => "22x12", :class => "hidden active-3") , ""
+        = tab.patient  t("menu.patients"), patients_path(:locale => current_locale), {:class => "txt-menu message"}
         = image_tag("en.png", :class => "en", :title => t("menu.lang_en"))
         = image_tag("vn.png", :class => "vn", :title => t("menu.lang_vn"))

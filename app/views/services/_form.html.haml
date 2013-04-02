@@ -1,10 +1,11 @@
-= simple_form_for(@service) do |f|
+= simple_form_for(@service, :html => {:class => "form-horizontal"}) do |f|
   = f.error_notification
 
   .form-inputs
-    = f.input :name
     = f.simple_fields_for :operations do |o|
-      = render "operation_fields", :f => o
-      = link_to_add_fields "Add Operation", f, :operations
+      .pull-left= render "operation_fields", :f => o
+      
+      = link_to_add_fields image_tag("add.png"), f, :operations
+      %br
   .form-actions
     = f.button :submit

@@ -2,6 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  activerecord:
+    models:
+      patient:
+    attributes:
+
   common: 
     error_photo_file_type: "File must be of file type .jpeg, .jpg or .png"
     full_title: "MATERNITY CLINIC - FAMILY PLANNING"
@@ -17,6 +22,7 @@ en:
     home: "Home"
     service: "Services"
     position: "Contact us"
+    patients: "List patients"
     lang_en: "English"
     lang_vn: "Vietnamese"
   services:
@@ -26,3 +32,17 @@ en:
     subject: "Specialist"
     work_at: "Work at"
     address: "Clinic"
+  patients:
+    types:
+      examine: "Antenatal examination"
+      supper_sound: "Ultrasound scan 4D"
+      supper_sound_4d: "Ultrasound scan color"
+      supper_sound_4d_disk: "Ultrasound scan 4D + Disk"
+      gyn: "Gynaecology"
+      thy: "Thyroid gland/Mammary gland"
+      general: "General"
+      dmdg: "Dmdg"
+      device: "Homing device"
+      dhkn: "After ĐHKN"
+      egg: "CT"
+      circle: "Put in a coil"

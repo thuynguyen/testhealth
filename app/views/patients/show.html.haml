@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @patient.name
+%p
+  %b Age:
+  = @patient.age
+%p
+  %b Bod:
+  = @patient.bod
+%p
+  %b Exam type:
+  = @patient.exam_type
+%p
+  %b Price:
+  = @patient.price
+%p
+  %b Total:
+  = @patient.total
+
+= link_to 'Edit', edit_patient_path(@patient)
+\|
+= link_to 'Back', patients_path

@@ -1,2 +1,3 @@
 $ ->
   homeObject.setup()
+  examineObject.setup()

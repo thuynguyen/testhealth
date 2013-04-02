@@ -1,2 +1,4 @@
-= f.input :name
-= link_to_remove_fields "remove", f
+.fields
+  .pull-left= f.input :name, :label => "Dịch vụ: "
+  .pull-left= link_to_remove_fields image_tag("remove.png"), f
+  .clearfix

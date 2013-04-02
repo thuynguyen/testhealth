@@ -1,4 +1,18 @@
 vn:
+  activerecord:
+    models:
+      patient:
+      examine:
+    attributes:
+      patient:
+        name: "Họ và Tên"
+        date_of_birth: "Năm sinh"
+        address: "Địa chỉ"
+        age: "Tuổi"
+      examine: 
+        kind: "Loại dịch vụ"
+        price: "Giá"
+
   common: 
     error_photo_file_type: "File must be of file type .jpeg, .jpg or .png"
     full_title: "PHÒNG KHÁM CHUYÊN KHOA PHỤ SẢN - KHHGĐ"
@@ -14,6 +28,7 @@ vn:
     home: "Trang Chủ"
     service: "Dịch Vụ"
     position: "Liên Hệ"
+    patients: "DS Khám"
     lang_vn: "Tiếng Việt"
     lang_en: "Tiếng Anh"
   services:
@@ -23,3 +38,17 @@ vn:
     subject: "Chuyên Khoa"
     work_at: "Công tác"
     address: "Phòng Khám"
+  patients:
+    types:
+      examine: "Khám Thai"
+      supper_sound: "Siêu Âm 4D"
+      supper_sound_4d: "Siêu Âm Màu"
+      supper_sound_4d_disk: "Siêu Âm 4D + Đĩa"
+      gyn: "Phụ Khoa"
+      thy: "Tuyến Giáp/Tuyến Vú"
+      general: "Tổng Quát"
+      dmdg: "Đo Độ Mờ Da Gáy"
+      device: "Đầu dò"
+      dhkn: "Sau ĐHKN"
+      egg: "Canh Trứng"
+      circle: "Đặt Vòng"

@@ -1,0 +1,6 @@
+.fields{:style=>"width: 440px;"}
+  .pull-left
+    = f.input :kind, :collection => Examine::TYPES.invert, include_blank: false
+    = f.input :price, :disabled => true, input_html: {:id => "patient_examines_price_#{f}"}
+  .pull-left= link_to_remove_fields image_tag("remove.png"), f
+  .clearfix

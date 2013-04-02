@@ -1,0 +1,14 @@
+= simple_form_for(@patient, :html => {:class => "form-horizontal"}) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :age, collection: 10..100, include_blank: false, :selected => 20
+    = f.input :date_of_birth, :collection => 1940..Date.today.year, :selected => Date.today.year - 20
+    = f.simple_fields_for :examines do |type|
+      .pull-left= render "examine_fields", :f => type
+      .pull-left= link_to_add_fields image_tag("add.png"), f, :examines
+      .clearfix
+      %br
+  .form-actions
+    = f.button :submit

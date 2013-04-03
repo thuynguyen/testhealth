@@ -1,12 +1,10 @@
-%h1 Listing patients
-
-%table
+%table.table.table-bordered
   %tr
-    %th Name
-    %th Age
-    %th Bod
-    %th Exam type
-    %th Price
+    %th Họ và Tên
+    %th Tuổi
+    %th Năm Sinh
+    %th Loại D.vụ
+    %th Giá
     %th Total
     %th
     %th
@@ -16,9 +14,9 @@
     %tr
       %td= patient.name
       %td= patient.age
-      %td= patient.bod
-      %td= patient.exam_type
-      %td= patient.price
+      %td= patient.date_of_birth
+      %td= patient.examines.map &:kind
+      %td= patient.examines.map &:price
       %td= patient.total
       %td= link_to 'Show', patient
       %td= link_to 'Edit', edit_patient_path(patient)

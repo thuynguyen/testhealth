@@ -1,26 +1,6 @@
-%table.table.table-bordered
-  %tr
-    %th Họ và Tên
-    %th Tuổi
-    %th Năm Sinh
-    %th Loại D.vụ
-    %th Giá
-    %th Total
-    %th
-    %th
-    %th
-
-  - @patients.each do |patient|
-    %tr
-      %td= patient.name
-      %td= patient.age
-      %td= patient.date_of_birth
-      %td= patient.examines.map &:kind
-      %td= patient.examines.map &:price
-      %td= patient.total
-      %td= link_to 'Show', patient
-      %td= link_to 'Edit', edit_patient_path(patient)
-      %td= link_to 'Destroy', patient, :confirm => 'Are you sure?', :method => :delete
+= select_tag 'examine_types', options_for_select(({0 => "All"}).merge(Examine::TYPES).invert)
+#list-patients
+  = render "list", :patients => @patients
 
 %br
 

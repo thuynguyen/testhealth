@@ -1,6 +1,8 @@
 window.examineObject =
   setup: ->
     @accordingPrice()
+    @datePicker()
+    @selectTypes()
 
   accordingPrice: -> 
     $("div").delegate ".collection", "change",  -> 
@@ -20,5 +22,22 @@ window.examineObject =
         when 10 then input.attr("value", 40)
         when 11 then input.attr("value", 40)
         when 12 then input.attr("value", 300)
+  
+  datePicker: ->
+    $('.datepicker').datepicker()
 
+  selectTypes: ->
+    $("#examine_types").change ->
+      type = $(this).val()
+      $.ajax
+        url: "/patients"
+        type: "GET"
+        data: 
+          type: type
+
+        success: (res)->
+          console.log("success"+res)
+          $("#list-patients").html(res)
+        failure: ->
+      return
           

@@ -3,10 +3,9 @@ class PatientsController < ApplicationController
   set_tab :patient
   def index
     @patients = Patient.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @patients }
+    if request.xhr?
+      @patients = params[:type].to_i == 0 ? Patient.all : Patient.joins(:examines).where("examines.kind = ?", params[:type])
+      render :partial => "list", :locals => {:patients => @patients}
     end
   end
 

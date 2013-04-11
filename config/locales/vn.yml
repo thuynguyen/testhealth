@@ -9,6 +9,7 @@ vn:
         date_of_birth: "Năm sinh"
         address: "Địa chỉ"
         age: "Tuổi"
+        examined_date: "Ngày khám"
       examine: 
         kind: "Loại dịch vụ"
         price: "Giá"
@@ -52,3 +53,4 @@ vn:
       dhkn: "Sau ĐHKN"
       egg: "Canh Trứng"
       circle: "Đặt Vòng"
+  

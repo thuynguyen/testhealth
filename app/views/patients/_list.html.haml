@@ -1,0 +1,27 @@
+%table.table.table-bordered
+  %tr
+    %th Họ và Tên
+    %th Tuổi
+    %th Năm Sinh
+    %th Loại D.vụ
+    %th Giá
+    %th Ngày Khám
+    %th
+    %th
+    %th
+
+  - patients.each do |patient|
+    %tr
+      %td= patient.name
+      %td= patient.age
+      %td= patient.date_of_birth.strftime("%Y")
+      - if params[:type] && params[:type].to_i != 0
+        %td= Examine::TYPES[params[:type].to_i]
+        %td= Examine::PRICES[params[:type].to_i]
+      - else
+        %td= patient.examines.map{|ex| Examine::TYPES[ex.kind]}.join(", ")
+        %td= patient.examines.map{|ex| Examine::PRICES[ex.kind]}.sum
+      %td= patient.examined_date.strftime("%d-%m-%Y")
+      %td= link_to 'Show', patient
+      %td= link_to 'Edit', edit_patient_path(patient)
+      %td= link_to 'Destroy', patient, :confirm => 'Are you sure?', :method => :delete

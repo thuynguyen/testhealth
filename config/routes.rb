@@ -1,14 +1,13 @@
 Healthcare::Application.routes.draw do
-  
-
-
   root :to => "home#index"
   get "change_locale" => "home#change_locale"
   #scope "(:locale)", :locale => /en|vn/ do
     devise_for :users
 
     resources :services
-    resources :patients
+    resources :patients do 
+      collection { post :import}
+    end 
 
     
     
@@ -16,8 +15,11 @@ Healthcare::Application.routes.draw do
       collection do 
         get :full_map
       end 
-    #end 
-  end
+    end 
+    devise_scope :user do
+      get "sign_in", :to => "devise/sessions#new"
+    end
+  #end
 
 
   # The priority is based upon order of creation:

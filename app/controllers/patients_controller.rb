@@ -64,6 +64,10 @@ class PatientsController < ApplicationController
     end
   end
 
+  def import
+    Patient.import(params[:file])
+    redirect_to patients_url, notice: "Patients imported successfully." 
+  end
   # DELETE /patients/1
   # DELETE /patients/1.json
   def destroy

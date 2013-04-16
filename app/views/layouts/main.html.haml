@@ -18,6 +18,10 @@
 
 
   %body
+    - if user_signed_in?
+      = link_to 'Sign Out', destroy_user_session_path, :method => :delete
+    - else
+      = link_to 'Sign In', sign_in_path
     .container.main-layout
       - if current_locale == "en"
         .pk_en

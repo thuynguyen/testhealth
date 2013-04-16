@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402075508) do
+ActiveRecord::Schema.define(:version => 20130411101822) do
 
   create_table "examines", :force => true do |t|
     t.integer  "kind"
@@ -32,7 +32,9 @@ ActiveRecord::Schema.define(:version => 20130402075508) do
     t.string   "name"
     t.integer  "age"
     t.datetime "date_of_birth"
+    t.datetime "examined_date"
     t.float    "total"
+    t.string   "address"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -46,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20130402075508) do
     t.string   "map_content_type"
     t.integer  "map_file_size"
     t.datetime "map_updated_at"
+    t.integer  "user_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
@@ -71,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20130402075508) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

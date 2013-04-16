@@ -1,0 +1,10 @@
+.modal.hide.fade#import_modal
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3 Import Products
+  .modal-body
+    = form_tag import_patients_path, multipart: true, id: "form-import" do
+      = file_field_tag :file 
+  .modal-footer
+    %a.btn{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} Close
+    %a.btn.btn-primary{:href => "#", :id => "btn-import"} Import

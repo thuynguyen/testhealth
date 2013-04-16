@@ -1,6 +1,5 @@
 class PositionsController < ApplicationController
-  # GET /positions 
-  # GET /positions.json
+  skip_before_filter :authenticate_user!, :only => [:index]  
   layout "main"
   set_tab :message
   def index

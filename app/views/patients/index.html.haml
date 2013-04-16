@@ -3,5 +3,10 @@
   = render "list", :patients => @patients
 
 %br
-
+= render "import_form"
 = link_to 'New Patient', new_patient_path
+
+
+= link_to "Import", "#", :id => "link-import"
+
+

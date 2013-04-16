@@ -3,6 +3,7 @@ window.examineObject =
     @accordingPrice()
     @datePicker()
     @selectTypes()
+    @import()
 
   accordingPrice: -> 
     $("div").delegate ".collection", "change",  -> 
@@ -40,4 +41,13 @@ window.examineObject =
           $("#list-patients").html(res)
         failure: ->
       return
+
+  import: ->
+    $("#link-import").click ->
+      $("#import_modal").modal('show')
+
+    $("#btn-import").click ->
+      $("#form-import").submit()
+      console.log 54545
+    return
           

@@ -1,15 +1,10 @@
 class ServicesController < ApplicationController
-  # GET /services
-  # GET /services.json
+  skip_before_filter :authenticate_user!, :only => [:index]
   set_tab :inbox
   layout "main"
   def index
     @services = Service.all
     @service = Service.last
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @services }
-    end
   end
 
   # GET /services/1
@@ -28,10 +23,6 @@ class ServicesController < ApplicationController
   def new
     @service = Service.new
     @service.operations.build
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @service }
-    end
   end
 
   # GET /services/1/edit

@@ -6,6 +6,7 @@ class CreatePatients < ActiveRecord::Migration
       t.datetime :date_of_birth
       t.datetime :examined_date
       t.float :total
+      t.string :address
 
       t.timestamps
     end
